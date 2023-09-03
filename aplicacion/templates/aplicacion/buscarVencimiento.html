@@ -1,0 +1,30 @@
+{% extends 'aplicacion/base.html' %}
+{% load static %}
+
+{% block titulo %}
+    Buscar vencimiento
+{% endblock titulo %}
+
+
+{% block contenido %}
+   
+
+{% if productos %}
+  <h2>{{ titulo }}</h2>
+  <ul>
+    {% for producto in productos %}
+      <li>{{ producto.nombre }} - Vencimiento: {{ producto.vencimiento }}</li>
+    {% endfor %}
+  </ul>
+{% else %}
+  <p>No se encontraron productos por vencer en los próximos 6 meses.</p>
+{% endif %}
+
+{% endblock contenido %}
+
+
+
+
+
+
+
